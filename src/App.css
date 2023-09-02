@@ -42,10 +42,50 @@
 }
 
 .cover {
-  width: 80vw;
+  width: 50vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+}
+
+.cover-text-container {
+  display: flex;
+  flex-direction: column;
+  flex:1;
+}
+
+.text-1 {
+  color: #424242;
+  font-family: Pacifico;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal; 
+  margin: 0;
+  margin-right: auto;
+}
+
+.text-2 {
+  margin: 0;
+  color: #424242;
+  font-family: Roboto;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal; 
+  margin-right: auto;
+}
+
+.cover-illustration {
+  display: flex;
+  flex: 1;
+  align-content: center;
+  justify-content: center;
+}
+
+img {
+  width: 485.1px;
+  height: 374.539px;
 }
