@@ -13,8 +13,9 @@
 }
 
 .navbar {
-  width: 905px;
+  width: 60vw;
   height: 53px;
+  padding-top: 40px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -38,8 +39,4 @@
   font-weight: 300;
   line-height: normal; 
   padding: 0 20px
-}
-
-.cover {
-  flex: 2
 }
