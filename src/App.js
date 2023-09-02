@@ -1,3 +1,5 @@
+import '@fontsource/pacifico';
+import '@fontsource/roboto';
 import './App.css';
 
 function App() {
@@ -10,7 +12,7 @@ function App() {
           <p className='button'>Projects</p>
           <p className='button'>Contact</p>
         </div>
-        <p>Personal Website</p>
+        <p className='cover'>Personal Website</p>
       </header>
     </div>
   );
