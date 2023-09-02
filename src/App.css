@@ -40,3 +40,12 @@
   line-height: normal; 
   padding: 0 20px
 }
+
+.cover {
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}

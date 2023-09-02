@@ -12,7 +12,9 @@ function App() {
           <p className='button'>Projects</p>
           <p className='button'>Contact</p>
         </div>
-        <p className='cover'>Personal Website</p>
+        <div className='cover'>
+          <p className='coveritem'>Personal Website</p>
+        </div>
       </header>
     </div>
   );
