@@ -1,12 +1,18 @@
 import '@fontsource/pacifico';
 import '@fontsource/roboto';
 import coffee from './illustrations/coffee.png';
+import background from './illustrations/Background.png';
 import './App.css';
 
 function App() {
+  const backgroundStyle={
+    backgroundImage: `url(${background})`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+  };
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="App-header" style={backgroundStyle}>
         <div className='navbar'>
           <p className='title'>Joseph Searle</p>
           <p className='button'>Experience</p>

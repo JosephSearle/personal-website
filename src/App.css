@@ -12,6 +12,11 @@
   color: #424242;
 }
 
+.background-image {
+  flex: 1;
+  justify-content: center;
+}
+
 .navbar {
   width: 60vw;
   height: 53px;
