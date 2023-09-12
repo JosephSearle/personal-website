@@ -1,24 +1,31 @@
 import '@fontsource/pacifico';
 import '@fontsource/roboto';
+import {useState, useEffect} from 'react';
+import WebNavbar from './components/WebNavbar';
 import coffee from './illustrations/coffee.png';
 import background from './illustrations/Background.png';
 import './App.css';
 
 function App() {
+  // Window Width variables
+  const [width, setWidth] = useState(window.innerWidth);
+  const breakPoint = 620;
+
+  // Background styling
   const backgroundStyle={
     backgroundImage: `url(${background})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
   };
+
+  useEffect(() => {
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header" style={backgroundStyle}>
-        <div className='navbar'>
-          <p className='title'>Joseph Searle</p>
-          <p className='button'>Experience</p>
-          <p className='button'>Projects</p>
-          <p className='button'>Contact</p>
-        </div>
+        <WebNavbar />
         <div className='cover'>
           <div className='cover-text-container'>
             <p className='text-1'>Hi i'm Joseph</p>
