@@ -11,6 +11,7 @@ function Home() {
     const [width, setWidth] = useState(window.innerWidth);
     const [navbar, setNavbar] = useState();
     const [mobileContent, setMobileContent] = useState();
+    const [device, setDevice] = useState();
     const breakPoint = 855;
 
     useEffect(() => {
@@ -18,9 +19,11 @@ function Home() {
         if (width > breakPoint) {
             setNavbar(<WebNavbar/>);
             setMobileContent(false);
+            setDevice("web");
         } else {
             setNavbar(<MobileNavbar/>);
             setMobileContent(true);
+            setDevice("mobile");
         }
     }, [width]);
 
@@ -28,23 +31,19 @@ function Home() {
         <div className="App">
             <header className="App-header">
                 {navbar}
-                { !mobileContent ? 
                     <div className='cover'>
-                        <div className='cover-text-container'>
-                            <p className='text-1'>Hi i'm Joseph</p>
-                            <p className='text-2'>I'm a Software Developer</p>
-                        </div>
+                        { !mobileContent ? 
+                            <div className='cover-text-container'>
+                                <p className='text-1'>Hi i'm Joseph</p>
+                                <p className='text-2'>I'm a Software Developer</p>
+                            </div>
+                            :
+                            null
+                        }
                         <div className='cover-illustration'>
-                            <img className={'cover-illustration-web'} src={coffee} alt='coffee.png'/>
+                            <img className={'cover-illustration-' + device} src={coffee} alt='coffee.png'/>
                         </div>
                     </div> 
-                    : 
-                    <div className='cover'>
-                        <div className='cover-illustration'>
-                            <img className={'cover-illustration-mobile'} src={coffee} alt='coffee.png'/>
-                        </div>
-                    </div> 
-                }
             </header>
         </div>
     );

@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .App-header {
@@ -18,18 +20,20 @@
 }
 
 .mobile-navbar {
+  position: fixed;
+  top: 30px;
   width: 80vw;
   height: 53px;
-  padding-top: 40px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
 .navbar {
+  position: fixed;
+  top: 30px;
   width: 60vw;
   height: 53px;
-  padding-top: 40px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -93,8 +97,8 @@
 }
 
 .cover-illustration-web {
-  width: 485.1px;
-  height: 374.539px;
+  width: 554.4px;
+  height: 428px;
 }
 .cover-illustration-mobile {
   width: 385.1px;

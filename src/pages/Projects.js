@@ -20,7 +20,9 @@ function Projects() {
         <div className="App">
             <header className="App-header">
                 {navbar}
-                <p>Projects</p>
+                <div className='cover'>
+                    <p>Projects</p>
+                </div>
             </header>
         </div>
     );

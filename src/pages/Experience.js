@@ -20,7 +20,9 @@ function Experience() {
         <div className="App">
             <header className="App-header">
                 {navbar}
-                <p>Experience</p>
+                <div className='cover'>
+                    <p>Experience</p>
+                </div>
             </header>
         </div>
     );

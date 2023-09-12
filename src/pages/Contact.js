@@ -20,7 +20,9 @@ function Contact() {
         <div className="App">
             <header className="App-header">
                 {navbar}
-                <p>Contact</p>
+                <div className='cover'>
+                    <p>Contact</p>
+                </div>
             </header>
         </div>
     );
