@@ -11,6 +11,7 @@ function Home() {
     // Window Width variables
     const [width, setWidth] = useState(window.innerWidth);
     const breakPoint = 855;
+    let mobileViewActive;
 
     // Background styling
     const backgroundStyle={
@@ -24,23 +25,36 @@ function Home() {
     }, []);
 
     let navbar;
-    if (width > breakPoint) navbar = <WebNavbar/>
-    else navbar = <MobileNavbar/>
+
+    if (width > breakPoint) {
+        navbar = <WebNavbar/>;
+        mobileViewActive = false;
+    } else {
+        navbar = <MobileNavbar/>;
+        mobileViewActive = true;
+    }
 
     return (
         <div className="App">
             <header className="App-header" style={backgroundStyle}>
                 {navbar}
-                <div className='cover'>
-                <div className='cover-text-container'>
-                    <p className='text-1'>Hi i'm Joseph</p>
-                    <p className='text-2'>I'm a Software Developer</p>
-                    <p>{width}</p>
-                </div>
-                <div className='cover-illustration'>
-                    <img src={coffee} alt='coffee.png'/>
-                </div>
-                </div>
+                { !mobileViewActive ? 
+                    <div className='cover'>
+                        <div className='cover-text-container'>
+                            <p className='text-1'>Hi i'm Joseph</p>
+                            <p className='text-2'>I'm a Software Developer</p>
+                        </div>
+                        <div className='cover-illustration'>
+                            <img src={coffee} alt='coffee.png'/>
+                        </div>
+                    </div> 
+                    : 
+                    <div className='cover'>
+                        <div className='cover-illustration'>
+                            <img src={coffee} alt='coffee.png'/>
+                        </div>
+                    </div> 
+                }
             </header>
         </div>
     );
