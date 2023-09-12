@@ -1,8 +1,9 @@
 import '../App.css';
-import { IconButton, Drawer, List, ListItem, ListItemButton } from '@mui/material';
+import { IconButton, Drawer, List, ListItem, Button } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from 'react';
-
+import { Link } from 'react-router-dom';
+ 
 function MobileNavbar() {
     const [menu, setMenu] = useState(false);
 
@@ -18,13 +19,16 @@ function MobileNavbar() {
             >
                 <List>
                     <ListItem>
-                        <ListItemButton disableRipple style={{color: '#424242'}}>Experience</ListItemButton>
+                        <Link to="/"><Button disableRipple style={{color: '#424242'}}>Home</Button></Link>
                     </ListItem>
                     <ListItem>
-                        <ListItemButton disableRipple style={{color: '#424242'}}>Projects</ListItemButton>
+                        <Link to="/Experience"><Button disableRipple style={{color: '#424242'}}>Experience</Button></Link>
                     </ListItem>
                     <ListItem>
-                        <ListItemButton disableRipple style={{color: '#424242'}}>Contact</ListItemButton>
+                        <Link to="/Projects"><Button disableRipple style={{color: '#424242'}}>Projects</Button></Link>
+                    </ListItem>
+                    <ListItem>
+                        <Link to="/Contact"><Button disableRipple style={{color: '#424242'}}>Contact</Button></Link>
                     </ListItem>
                 </List>
             </Drawer>
