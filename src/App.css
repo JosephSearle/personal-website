@@ -12,6 +12,20 @@
   color: #424242;
 }
 
+.background-image {
+  flex: 1;
+  justify-content: center;
+}
+
+.mobile-navbar {
+  width: 80vw;
+  height: 53px;
+  padding-top: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .navbar {
   width: 60vw;
   height: 53px;
@@ -31,18 +45,8 @@
   margin-right: auto;
 }
 
-.button {
-  color: #424242;
-  font-family: Roboto;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal; 
-  padding: 0 20px
-}
-
 .cover {
-  width: 50vw;
+  width: 70vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
