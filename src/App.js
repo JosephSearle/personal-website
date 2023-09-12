@@ -37,7 +37,6 @@ function App() {
             <p className='text-2'>I'm a Software Developer</p>
           </div>
           <div className='cover-illustration'>
-            <p>{width}</p>
             <img src={coffee} alt='coffee.png'/>
           </div>
         </div>

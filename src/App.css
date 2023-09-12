@@ -17,6 +17,15 @@
   justify-content: center;
 }
 
+.mobile-navbar {
+  width: 80vw;
+  height: 53px;
+  padding-top: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .navbar {
   width: 60vw;
   height: 53px;
