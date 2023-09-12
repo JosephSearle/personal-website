@@ -66,20 +66,23 @@
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal; 
-  margin: 0;
-  margin-right: auto;
+  line-height: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-align: left;
 }
 
 .text-2 {
-  margin: 0;
+  justify-self: left;
   color: #424242;
   font-family: Roboto;
   font-size: 40px;
   font-style: normal;
   font-weight: 500;
-  line-height: normal; 
-  margin-right: auto;
+  line-height: normal;
+  margin-top: 0;
+  margin-right: 0;
+  text-align: left;
 }
 
 .cover-illustration {
@@ -89,7 +92,11 @@
   justify-content: center;
 }
 
-img {
+.cover-illustration-web {
   width: 485.1px;
   height: 374.539px;
+}
+.cover-illustration-mobile {
+  width: 385.1px;
+  height: 274.539px;
 }

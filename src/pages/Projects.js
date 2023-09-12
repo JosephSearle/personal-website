@@ -1,20 +1,12 @@
 import {useState, useEffect} from 'react';
 import WebNavbar from '../components/WebNavbar';
 import MobileNavbar from '../components/MobileNavbar';
-import background from '../illustrations/Background.png';
 import '../App.css';
 
 function Projects() {
     // Window Width variables
     const [width, setWidth] = useState(window.innerWidth);
     const breakPoint = 855;
-
-    // Background styling
-    const backgroundStyle={
-        backgroundImage: `url(${background})`,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-    };
 
     useEffect(() => {
         window.addEventListener("resize", () => setWidth(window.innerWidth));
@@ -26,7 +18,7 @@ function Projects() {
 
     return (
         <div className="App">
-            <header className="App-header" style={backgroundStyle}>
+            <header className="App-header">
                 {navbar}
                 <p>Projects</p>
             </header>
