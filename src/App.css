@@ -104,3 +104,27 @@
   width: 385.1px;
   height: 274.539px;
 }
+
+.projects-cover {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.ascent-project {
+  display: flex;
+  flex-direction: row;
+}
+
+.ascent-3d {
+  flex: 1;
+}
+
+.ascent-info {
+  flex: 1;
+  align-self: center;
+  text-align: left;
+}

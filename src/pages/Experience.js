@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react';
 import WebNavbar from '../components/WebNavbar';
 import MobileNavbar from '../components/MobileNavbar';
+import Spline from '@splinetool/react-spline';
 import '../App.css';
 
 function Experience() {
@@ -21,7 +22,7 @@ function Experience() {
             <header className="App-header">
                 {navbar}
                 <div className='cover'>
-                    <p>Experience</p>
+                    <Spline scene="https://prod.spline.design/Q0FH5dTjUpXHSslT/scene.splinecode" />
                 </div>
             </header>
         </div>
