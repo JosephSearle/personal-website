@@ -1,28 +1,22 @@
 .App {
+  position: relative;
   text-align: center;
   margin: 0;
   padding: 0;
 }
 
 .App-header {
-  background-color: #fff;
+  background: linear-gradient(180deg, #1B1B1B 0%, #1B1B1B 100%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: calc(10px + 2vmin);
-  color: #424242;
-}
-
-.background-image {
-  flex: 1;
-  justify-content: center;
 }
 
 .mobile-navbar {
   position: fixed;
   top: 30px;
-  width: 80vw;
+  width: 85vw;
   height: 53px;
   display: flex;
   justify-content: flex-end;
@@ -31,8 +25,8 @@
 
 .navbar {
   position: fixed;
-  top: 30px;
-  width: 60vw;
+  top: 35px;
+  width: 85vw;
   height: 53px;
   display: flex;
   justify-content: flex-end;
@@ -40,91 +34,95 @@
 }
 
 .title {
-  color: #424242;
-  font-family: Pacifico;
-  font-size: 30px;
+  color: #fff;
+  font-family: 'Roboto';
+  font-size: 24px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   line-height: normal;
   margin-right: auto;
 }
 
 .cover {
-  width: 70vw;
+  width: 85vw;
+  height: 100vh;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
-  flex-grow: 1;
 }
 
-.cover-text-container {
+.cover-content {
   display: flex;
   flex-direction: column;
-  flex:1;
+  flex: 1;
 }
 
-.text-1 {
-  color: #424242;
-  font-family: Pacifico;
-  font-size: 40px;
+.cover-image {
+  flex: 1;
+}
+
+.hi-there {
+  color: #FFF;
+  font-family: 'Roboto';
+  font-size: 24px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   line-height: normal;
-  margin-right: 0;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.name {
+  color: #FFF;
+  font-family: 'Roboto';
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.job-title {
+  color: #4361EE;
+  font-family: 'Roboto';
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 0;
+  margin-top: 30px;
   margin-bottom: 0;
   text-align: left;
 }
 
-.text-2 {
-  justify-self: left;
-  color: #424242;
-  font-family: Roboto;
-  font-size: 40px;
+.info {
+  color: #FFF;
+  font-family: 'Roboto';
+  font-size: 16px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 300;
   line-height: normal;
-  margin-top: 0;
-  margin-right: 0;
+  padding: 0;
+  margin: 0;
   text-align: left;
 }
 
-.cover-illustration {
-  display: flex;
-  flex: 1;
-  align-content: center;
-  justify-content: center;
-}
-
-.cover-illustration-web {
-  width: 554.4px;
-  height: 428px;
-}
-.cover-illustration-mobile {
-  width: 385.1px;
-  height: 274.539px;
-}
-
-.projects-cover {
-  width: 100vw;
+.contacts {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  flex-grow: 1;
+  margin-top: 30px;
 }
 
-.ascent-project {
-  display: flex;
-  flex-direction: row;
+.contact {
+  margin-right: 30px;
 }
 
-.ascent-3d {
-  flex: 1;
-}
-
-.ascent-info {
-  flex: 1;
-  align-self: center;
-  text-align: left;
+.profile {
+  width: 115px;
+  height: 115px;
 }

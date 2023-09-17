@@ -1,20 +1,22 @@
 import '@fontsource/pacifico';
-import '@fontsource/roboto';
-import {useState, useEffect} from 'react';
+import '@fontsource/roboto/700.css';
+import '@fontsource/roboto/300.css'
 import WebNavbar from '../components/WebNavbar';
-import MobileNavbar from '../components/MobileNavbar';
-import coffee from '../illustrations/coffee.png';
+import profile from '../images/profile.png';
+import Spline from '@splinetool/react-spline';
+import IconButton from '@mui/material/IconButton';
 import '../App.css';
+import { Email, GitHub, LinkedIn } from '@mui/icons-material';
 
 function Home() {
     // Window Width variables
-    const [width, setWidth] = useState(window.innerWidth);
-    const [navbar, setNavbar] = useState();
-    const [mobileContent, setMobileContent] = useState();
-    const [device, setDevice] = useState();
-    const breakPoint = 855;
+    //const [width, setWidth] = useState(window.innerWidth);
+    //const [navbar, setNavbar] = useState();
+    //const [mobileContent, setMobileContent] = useState();
+    //const [device, setDevice] = useState();
+    //const breakPoint = 855;
 
-    useEffect(() => {
+    /*useEffect(() => {
         window.addEventListener("resize", () => setWidth(window.innerWidth));
         if (width > breakPoint) {
             setNavbar(<WebNavbar/>);
@@ -25,25 +27,36 @@ function Home() {
             setMobileContent(true);
             setDevice("mobile");
         }
-    }, [width]);
+    }, [width]);*/
 
     return (
         <div className="App">
             <header className="App-header">
-                {navbar}
-                    <div className='cover'>
-                        { !mobileContent ? 
-                            <div className='cover-text-container'>
-                                <p className='text-1'>Hi i'm Joseph</p>
-                                <p className='text-2'>I'm a Software Developer</p>
-                            </div>
-                            :
-                            null
-                        }
-                        <div className='cover-illustration'>
-                            <img className={'cover-illustration-' + device} src={coffee} alt='coffee.png'/>
+                <WebNavbar />
+                <div className='cover'>
+                    <div className='cover-content'>
+                        <img className='profile' src={profile} alt='profile'/>
+                        <p className='hi-there'>HI THERE I'M</p>
+                        <p className='name'>JOSEPH SEARLE</p>
+                        <p className='job-title'>FULL-STACK DEVELOPER</p>
+                        <p className='info'>I’M A FIRST CLASS COMPUTER SCIENCE GRADUATE WITH SKILLS IN</p>
+                        <p className='info'>SOFTWARE DEVELOPMENT AND CLOUD COMPUTING</p>
+                        <div className='contacts'>
+                            <IconButton size='large' style={{color: '#fff', marginRight: '10px'}}>
+                                <GitHub fontSize='inherit'/>
+                            </IconButton>
+                            <IconButton size='large' style={{color: '#fff', marginRight: '10px'}}>
+                                <LinkedIn fontSize='large'/>
+                            </IconButton>
+                            <IconButton size='large' style={{color: '#fff', marginRight: '10px'}}>
+                                <Email fontSize='large'/>
+                            </IconButton>
                         </div>
-                    </div> 
+                    </div>
+                    <div className='cover-image'>
+                        <Spline scene="https://prod.spline.design/8ZKVJLzg4ccZ0lfA/scene.splinecode" />
+                    </div>
+                </div>
             </header>
         </div>
     );
