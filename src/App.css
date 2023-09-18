@@ -1,95 +1,206 @@
-.App {
-  text-align: center;
-}
-
 .App-header {
-  background-color: #fff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: calc(10px + 2vmin);
-  color: #424242;
-}
-
-.background-image {
-  flex: 1;
-  justify-content: center;
 }
 
 .mobile-navbar {
-  width: 80vw;
+  position: fixed;
+  top: 30px;
+  width: 85vw;
   height: 53px;
-  padding-top: 40px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
 .navbar {
-  width: 60vw;
+  position: fixed;
+  top: 35px;
+  width: 85vw;
   height: 53px;
-  padding-top: 40px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
 .title {
-  color: #424242;
-  font-family: Pacifico;
-  font-size: 30px;
+  color: #fff;
+  font-family: 'Roboto';
+  font-size: 24px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
+  line-height: normal;
+  margin-right: auto;
+}
+
+.title-mobile {
+  color: #fff;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
   line-height: normal;
   margin-right: auto;
 }
 
 .cover {
-  width: 70vw;
+  width: 85vw;
+  height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-grow: 1;
 }
 
-.cover-text-container {
+.cover-mobile {
+  width: 85vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  flex:1;
+  justify-content: center;
+  align-items: center;
 }
 
-.text-1 {
-  color: #424242;
-  font-family: Pacifico;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal; 
-  margin: 0;
-  margin-right: auto;
+.cover-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
 }
 
-.text-2 {
-  margin: 0;
-  color: #424242;
-  font-family: Roboto;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal; 
-  margin-right: auto;
-}
-
-.cover-illustration {
+.cover-image {
   display: flex;
   flex: 1;
-  align-content: center;
   justify-content: center;
+  align-items: center;
 }
 
-img {
-  width: 485.1px;
-  height: 374.539px;
+.hi-there {
+  color: #FFF;
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.hi-there-mobile {
+  color: #FFF;
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.name {
+  color: #FFF;
+  font-family: 'Roboto';
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.name-mobile {
+  color: #FFF;
+  font-family: 'Roboto';
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.job-title {
+  color: #4361EE;
+  font-family: 'Roboto';
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 0;
+  margin-top: 30px;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.job-title-mobile {
+  color: #4361EE;
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 0;
+  margin-top: 30px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.info {
+  color: #FFF;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.info-mobile {
+  color: #FFF;
+  font-family: 'Roboto';
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.contacts-mobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.contact {
+  margin-right: 30px;
+}
+
+.profile {
+  width: 471px;
+  height: 471px;
+}
+
+.profile-mobile {
+  width: 291px;
+  height: 291px;
 }
