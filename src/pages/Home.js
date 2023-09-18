@@ -3,49 +3,62 @@ import '@fontsource/roboto/700.css';
 import '@fontsource/roboto/300.css'
 import WebNavbar from '../components/WebNavbar';
 import profile from '../images/profile.png';
-import Spline from '@splinetool/react-spline';
 import IconButton from '@mui/material/IconButton';
+import webBackground from '../images/webBackground.png';
+import mobileBackground from '../images/mobileBackground.png';
 import '../App.css';
 import { Email, GitHub, LinkedIn } from '@mui/icons-material';
+import { useState, useEffect, useMemo} from 'react';
 
 function Home() {
     // Window Width variables
-    //const [width, setWidth] = useState(window.innerWidth);
-    //const [navbar, setNavbar] = useState();
-    //const [mobileContent, setMobileContent] = useState();
-    //const [device, setDevice] = useState();
-    //const breakPoint = 855;
+    const [width, setWidth] = useState(window.innerWidth);
+    const [background, setBackground] = useState();
+    const [device, setDevice] = useState();
+    const [mobile, setMobile] = useState();
+    const breakPoint = 844;
 
-    /*useEffect(() => {
+    const webBackgroundStyle =  useMemo(() => {
+        return {backgroundImage: `url(${webBackground})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center',backgroundSize: 'cover'}
+    }, []);
+    const mobileBackgroundStyle = useMemo(() => {
+        return {backgroundImage: `url(${mobileBackground})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center',backgroundSize: 'cover'}
+    }, []);
+
+    // eslint-disable-next-line
+    useEffect(() => { 
         window.addEventListener("resize", () => setWidth(window.innerWidth));
         if (width > breakPoint) {
-            setNavbar(<WebNavbar/>);
-            setMobileContent(false);
-            setDevice("web");
+            setBackground(webBackgroundStyle);
+            setMobile(false);
+            setDevice("");
         } else {
-            setNavbar(<MobileNavbar/>);
-            setMobileContent(true);
-            setDevice("mobile");
+            setBackground(mobileBackgroundStyle);
+            setMobile(true);
+            setDevice("-mobile");
         }
-    }, [width]);*/
+    }, [width, webBackgroundStyle, mobileBackgroundStyle]);
 
     return (
         <div className="App">
-            <header className="App-header">
-                <WebNavbar />
-                <div className='cover'>
+            <header className="App-header" style={background}>
+                <WebNavbar device={device}/>
+                <div className={'cover'+device}>
                     <div className='cover-content'>
-                        <img className='profile' src={profile} alt='profile'/>
-                        <p className='hi-there'>HI THERE I'M</p>
-                        <p className='name'>JOSEPH SEARLE</p>
-                        <p className='job-title'>FULL-STACK DEVELOPER</p>
-                        <p className='info'>I’M A FIRST CLASS COMPUTER SCIENCE GRADUATE WITH SKILLS IN</p>
-                        <p className='info'>SOFTWARE DEVELOPMENT AND CLOUD COMPUTING</p>
-                        <div className='contacts'>
-                            <IconButton size='large' style={{color: '#fff', marginRight: '10px'}}>
+                        {
+                            mobile && 
+                            <img className={'profile'+device} src={profile} alt='profile'/>
+                        }
+                        <p className={'hi-there'+device}>HI THERE I'M</p>
+                        <p className={'name'+device}>JOSEPH SEARLE</p>
+                        <p className={'job-title'+device}>FULL-STACK DEVELOPER</p>
+                        <p className={'info'+device}>I’M A FIRST CLASS COMPUTER SCIENCE GRADUATE WITH SKILLS IN</p>
+                        <p className={'info'+device}>SOFTWARE DEVELOPMENT AND CLOUD COMPUTING</p>
+                        <div className={'contacts'+device}>
+                            <IconButton size='large' style={{color: '#fff', marginRight: '10px'}} href='https://github.com/JosephSearle' target='_blank'>
                                 <GitHub fontSize='inherit'/>
                             </IconButton>
-                            <IconButton size='large' style={{color: '#fff', marginRight: '10px'}}>
+                            <IconButton size='large' style={{color: '#fff', marginRight: '10px'}} href='https://www.linkedin.com/in/josephwilliamsearle/' target='_blank'>
                                 <LinkedIn fontSize='large'/>
                             </IconButton>
                             <IconButton size='large' style={{color: '#fff', marginRight: '10px'}}>
@@ -53,9 +66,12 @@ function Home() {
                             </IconButton>
                         </div>
                     </div>
-                    <div className='cover-image'>
-                        <Spline scene="https://prod.spline.design/8ZKVJLzg4ccZ0lfA/scene.splinecode" />
-                    </div>
+                    {
+                        !mobile &&
+                        <div className='cover-image'>
+                            <img className={'profile'+device} src={profile} alt='profile'/>
+                        </div>
+                    }
                 </div>
             </header>
         </div>

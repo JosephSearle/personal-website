@@ -1,9 +1,9 @@
 import '../App.css';
 
-function WebNavbar() {
+function WebNavbar(props) {
     return (
         <div className='navbar'>
-          <p className='title'>Joseph Searle</p>
+          <p className={'title'+props.device}>@JosephSearle</p>
         </div>
     );
 }

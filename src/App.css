@@ -1,12 +1,4 @@
-.App {
-  position: relative;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
 .App-header {
-  background: linear-gradient(180deg, #1B1B1B 0%, #1B1B1B 100%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -38,7 +30,17 @@
   font-family: 'Roboto';
   font-size: 24px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 300;
+  line-height: normal;
+  margin-right: auto;
+}
+
+.title-mobile {
+  color: #fff;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
   line-height: normal;
   margin-right: auto;
 }
@@ -48,17 +50,31 @@
   height: 100vh;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.cover-mobile {
+  width: 85vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
 .cover-content {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   flex: 1;
 }
 
 .cover-image {
+  display: flex;
   flex: 1;
+  justify-content: center;
+  align-items: center;
 }
 
 .hi-there {
@@ -73,6 +89,18 @@
   text-align: left;
 }
 
+.hi-there-mobile {
+  color: #FFF;
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
 .name {
   color: #FFF;
   font-family: 'Roboto';
@@ -83,6 +111,18 @@
   padding: 0;
   margin: 0;
   text-align: left;
+}
+
+.name-mobile {
+  color: #FFF;
+  font-family: 'Roboto';
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }
 
 .job-title {
@@ -98,6 +138,19 @@
   text-align: left;
 }
 
+.job-title-mobile {
+  color: #4361EE;
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 0;
+  margin-top: 30px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
 .info {
   color: #FFF;
   font-family: 'Roboto';
@@ -110,10 +163,30 @@
   text-align: left;
 }
 
+.info-mobile {
+  color: #FFF;
+  font-family: 'Roboto';
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
 .contacts {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.contacts-mobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
   margin-top: 30px;
 }
@@ -123,6 +196,11 @@
 }
 
 .profile {
-  width: 115px;
-  height: 115px;
+  width: 471px;
+  height: 471px;
+}
+
+.profile-mobile {
+  width: 291px;
+  height: 291px;
 }
