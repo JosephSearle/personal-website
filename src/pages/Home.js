@@ -51,7 +51,7 @@ function Home() {
                         }
                         <p className={'hi-there'+device}>HI THERE I'M</p>
                         <p className={'name'+device}>JOSEPH SEARLE</p>
-                        <p className={'job-title'+device}>FULL-STACK DEVELOPER</p>
+                        <p className={'job-title'+device}>SOFTWARE DEVELOPER</p>
                         <p className={'info'+device}>I’M A FIRST CLASS COMPUTER SCIENCE GRADUATE WITH SKILLS IN</p>
                         <p className={'info'+device}>SOFTWARE DEVELOPMENT AND CLOUD COMPUTING</p>
                         <div className={'contacts'+device}>
