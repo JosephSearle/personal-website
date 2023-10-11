@@ -55,13 +55,13 @@ function Home() {
                         <p className={'info'+device}>I’M A FIRST CLASS COMPUTER SCIENCE GRADUATE WITH SKILLS IN</p>
                         <p className={'info'+device}>SOFTWARE DEVELOPMENT AND CLOUD COMPUTING</p>
                         <div className={'contacts'+device}>
-                            <IconButton size='large' style={{color: '#fff', marginRight: '10px'}} href='https://github.com/JosephSearle' target='_blank'>
+                            <IconButton data-testid="git-button" size='large' style={{color: '#fff', marginRight: '10px'}} href='https://github.com/JosephSearle' target='_blank'>
                                 <GitHub fontSize='inherit'/>
                             </IconButton>
-                            <IconButton size='large' style={{color: '#fff', marginRight: '10px'}} href='https://www.linkedin.com/in/josephwilliamsearle/' target='_blank'>
+                            <IconButton data-testid="linkedin-button" size='large' style={{color: '#fff', marginRight: '10px'}} href='https://www.linkedin.com/in/josephwilliamsearle/' target='_blank'>
                                 <LinkedIn fontSize='large'/>
                             </IconButton>
-                            <IconButton size='large' style={{color: '#fff', marginRight: '10px'}}>
+                            <IconButton data-testid="email-button" size='large' style={{color: '#fff', marginRight: '10px'}}>
                                 <Email fontSize='large'/>
                             </IconButton>
                         </div>
