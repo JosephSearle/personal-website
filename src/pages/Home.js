@@ -9,6 +9,7 @@ import mobileBackground from '../images/mobileBackground.png';
 import '../styles/App.css';
 import { Email, GitHub, LinkedIn } from '@mui/icons-material';
 import { useState, useEffect, useMemo} from 'react';
+import { send } from "emailjs-com";
 
 function Home() {
     // Window Width variables
@@ -17,6 +18,26 @@ function Home() {
     const [device, setDevice] = useState();
     const [mobile, setMobile] = useState();
     const breakPoint = 844;
+    const [toSend, setToSend] = useState({
+        first_name: '',
+        last_name: '',
+        message: '',
+        reply_to: ''
+    });
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+        send(
+            'service_cdpk05o',
+            'template_yd2uyym',
+            toSend,
+            'u9p3LDCJuOZD7wo_r'
+        )
+    }
+
+    const handleChange = (e) => {
+        setToSend({...toSend, [e.target.name]: e.target.value });
+    };
 
     const webBackgroundStyle =  useMemo(() => {
         return {backgroundImage: `url(${webBackground})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center',backgroundSize: 'cover'}
@@ -65,6 +86,37 @@ function Home() {
                                 <Email fontSize='large'/>
                             </IconButton>
                         </div>
+                        <form onSubmit={onSubmit}>
+                            <input
+                                type='text'
+                                name='first_name'
+                                placeholder='First name'
+                                value={toSend.first_name}
+                                onChange={handleChange}
+                            />
+                            <input
+                                type='text'
+                                name='last_name'
+                                placeholder='Last name'
+                                value={toSend.last_name}
+                                onChange={handleChange}
+                            />
+                            <input
+                                type='text'
+                                name='message'
+                                placeholder='Message'
+                                value={toSend.message}
+                                onChange={handleChange}
+                            />
+                            <input
+                                type='text'
+                                name='reply_to'
+                                placeholder='Your email'
+                                value={toSend.reply_to}
+                                onChange={handleChange}
+                            />
+                            <button type='submit'>Submit</button>
+                        </form>
                     </div>
                     {
                         !mobile &&
