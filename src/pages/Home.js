@@ -9,7 +9,8 @@ import mobileBackground from '../images/mobileBackground.png';
 import '../styles/App.css';
 import { Email, GitHub, LinkedIn } from '@mui/icons-material';
 import { useState, useEffect, useMemo} from 'react';
-import { send } from "emailjs-com";
+import EmailForm from '../components/EmailForm';
+import Modal from 'react-modal';
 
 function Home() {
     // Window Width variables
@@ -18,26 +19,16 @@ function Home() {
     const [device, setDevice] = useState();
     const [mobile, setMobile] = useState();
     const breakPoint = 844;
-    const [toSend, setToSend] = useState({
-        first_name: '',
-        last_name: '',
-        message: '',
-        reply_to: ''
-    });
 
-    const onSubmit = (e) => {
-        e.preventDefault();
-        send(
-            'service_cdpk05o',
-            'template_yd2uyym',
-            toSend,
-            'u9p3LDCJuOZD7wo_r'
-        )
+    const [modalIsOpen, setIsOpen] = useState(false);
+
+    function openModal() {
+        setIsOpen(true);
     }
 
-    const handleChange = (e) => {
-        setToSend({...toSend, [e.target.name]: e.target.value });
-    };
+    function closeModal() {
+        setIsOpen(false);
+    }
 
     const webBackgroundStyle =  useMemo(() => {
         return {backgroundImage: `url(${webBackground})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center',backgroundSize: 'cover'}
@@ -82,41 +73,17 @@ function Home() {
                             <IconButton data-testid="linkedin-button" size='large' style={{color: '#fff', marginRight: '10px'}} href='https://www.linkedin.com/in/josephwilliamsearle/' target='_blank'>
                                 <LinkedIn fontSize='large'/>
                             </IconButton>
-                            <IconButton data-testid="email-button" size='large' style={{color: '#fff', marginRight: '10px'}}>
+                            <IconButton data-testid="email-button" size='large' style={{color: '#fff', marginRight: '10px'}} onClick={openModal}>
                                 <Email fontSize='large'/>
                             </IconButton>
                         </div>
-                        <form onSubmit={onSubmit}>
-                            <input
-                                type='text'
-                                name='first_name'
-                                placeholder='First name'
-                                value={toSend.first_name}
-                                onChange={handleChange}
-                            />
-                            <input
-                                type='text'
-                                name='last_name'
-                                placeholder='Last name'
-                                value={toSend.last_name}
-                                onChange={handleChange}
-                            />
-                            <input
-                                type='text'
-                                name='message'
-                                placeholder='Message'
-                                value={toSend.message}
-                                onChange={handleChange}
-                            />
-                            <input
-                                type='text'
-                                name='reply_to'
-                                placeholder='Your email'
-                                value={toSend.reply_to}
-                                onChange={handleChange}
-                            />
-                            <button type='submit'>Submit</button>
-                        </form>
+                        <Modal
+                            isOpen={modalIsOpen}
+                            onRequestClose={closeModal}
+                            className='modal'
+                        >
+                            <EmailForm />
+                        </Modal>
                     </div>
                     {
                         !mobile &&
