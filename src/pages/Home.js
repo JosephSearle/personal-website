@@ -6,7 +6,7 @@ import profile from '../images/profile.png';
 import IconButton from '@mui/material/IconButton';
 import webBackground from '../images/webBackground.png';
 import mobileBackground from '../images/mobileBackground.png';
-import '../App.css';
+import '../styles/App.css';
 import { Email, GitHub, LinkedIn } from '@mui/icons-material';
 import { useState, useEffect, useMemo} from 'react';
 

@@ -1,4 +1,4 @@
-import '../App.css';
+import '../styles/App.css';
 
 function WebNavbar(props) {
     return (
