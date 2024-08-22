@@ -1,6 +1,7 @@
 import '../styles/EmailForm.css';
 import {useState} from "react";
 import {send} from "emailjs-com";
+import {validateFields} from "../util/emailUtil";
 
 function EmailForm(props) {
     const serviceID = process.env.REACT_APP_EMAIL_SERVICE_ID;
@@ -17,7 +18,7 @@ function EmailForm(props) {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        if(validateToSend(toSend)) {
+        if(validateFields(toSend)) {
             send(
                 serviceID,
                 templateID,
@@ -27,15 +28,6 @@ function EmailForm(props) {
             props.onClose();
         } else {
             setErrorMessage("Uh Oh: All fields must be filled in");
-        }
-    }
-
-    const validateToSend = (fieldsToSend) => {
-        if (fieldsToSend.message === '' || fieldsToSend.first_name === '' || fieldsToSend.last_name === '' || fieldsToSend.reply_to === '') {
-            console.log('Oops!! You have to fill in all fields to submit.');
-            return false;
-        } else {
-            return true;
         }
     }
 
