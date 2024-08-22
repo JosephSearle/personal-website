@@ -9,6 +9,7 @@ function EmailForm(props) {
     const userID = process.env.REACT_APP_EMAIL_USER_ID;
 
     const [errorMessage, setErrorMessage] = useState("");
+
     const [toSend, setToSend] = useState({
         first_name: '',
         last_name: '',
@@ -25,6 +26,7 @@ function EmailForm(props) {
                 toSend,
                 userID
             )
+            console.log('Email sent successfully');
             props.onClose();
         } else {
             setErrorMessage("Uh Oh: All fields must be filled in");
