@@ -2,8 +2,8 @@ import '@fontsource/pacifico';
 import '@fontsource/roboto/700.css';
 import '@fontsource/roboto/300.css'
 import Navbar from '../components/Navbar';
-import webBackground from '../images/webBackground.png';
-import mobileBackground from '../images/mobileBackground.png';
+import webBackground from '../resources/images/webBackground.png';
+import mobileBackground from '../resources/images/mobileBackground.png';
 import { useState, useEffect, useMemo} from 'react';
 import Cover from "../components/Cover";
 

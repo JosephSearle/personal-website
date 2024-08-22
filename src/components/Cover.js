@@ -1,4 +1,4 @@
-import profile from "../images/profile.png";
+import profile from "../resources/images/profile.png";
 import MyInfo from "./MyInfo";
 import Contacts from "./Contacts";
 import Modal from "react-modal";

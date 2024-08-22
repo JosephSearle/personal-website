@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import Home from '../pages/Home'
-import profile from '../images/profile.png';
+import profile from '../resources/profile.png';
 
 test("Text 1 renders to the screen", () => {
     render(<Home/>)
