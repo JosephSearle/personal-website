@@ -1,0 +1,29 @@
+.navbar {
+    position: fixed;
+    top: 35px;
+    width: 85vw;
+    height: 53px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbar-title {
+    color: #fff;
+    font-family: 'Roboto';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-right: auto;
+}
+
+.navbar-title-mobile {
+    color: #fff;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-right: auto;
+}

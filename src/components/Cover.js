@@ -4,7 +4,7 @@ import Contacts from "./Contacts";
 import Modal from "react-modal";
 import EmailForm from "./EmailForm";
 import {useState} from "react";
-import '../styles/App.css';
+import '../styles/Cover.css';
 
 function Cover(props) {
 
@@ -23,14 +23,14 @@ function Cover(props) {
             <div className='cover-content'>
                 {
                     props.mobile &&
-                    <img className={'profile'+props.device} src={profile} alt='profile'/>
+                    <img className={'cover-profile'+props.device} src={profile} alt='profile'/>
                 }
                 <MyInfo device={props.device}/>
                 <Contacts openModal={openModal} device={props.device}/>
                 <Modal
                     isOpen={modalIsOpen}
                     onRequestClose={closeModal}
-                    className={'modal'+ props.device}
+                    className={'cover-modal'+ props.device}
                     style={{
                         overlay: {
                             backgroundColor: 'rgb(27,27,27,50%)',
@@ -46,7 +46,7 @@ function Cover(props) {
             {
                 !props.mobile &&
                 <div className='cover-image'>
-                    <img className={'profile'+props.device} src={profile} alt='profile'/>
+                    <img className={'cover-profile'+props.device} src={profile} alt='profile'/>
                 </div>
             }
         </div>

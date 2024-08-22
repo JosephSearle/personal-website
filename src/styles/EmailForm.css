@@ -5,7 +5,7 @@
     text-align: center;
 }
 
-.small-input {
+.email-form-small-input {
     font-family: Roboto;
     margin-bottom: 10px;
     background-color: #4B4B4B;
@@ -14,7 +14,7 @@
     border: none;
 }
 
-.large-input {
+.email-form-large-input {
     font-family: Roboto;
     resize: none;
     margin-bottom: 10px;

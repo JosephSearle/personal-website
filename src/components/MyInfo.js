@@ -1,3 +1,5 @@
+import '../styles/MyInfo.css';
+
 function MyInfo(props) {
     return (
         <div>

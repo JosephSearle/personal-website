@@ -1,7 +1,7 @@
 import '@fontsource/pacifico';
 import '@fontsource/roboto/700.css';
 import '@fontsource/roboto/300.css'
-import WebNavbar from '../components/WebNavbar';
+import Navbar from '../components/Navbar';
 import webBackground from '../images/webBackground.png';
 import mobileBackground from '../images/mobileBackground.png';
 import { useState, useEffect, useMemo} from 'react';
@@ -42,7 +42,7 @@ function Home() {
     return (
         <div className="App">
             <header className="App-header" style={background}>
-                <WebNavbar device={device}/>
+                <Navbar device={device}/>
                 <Cover device={device} mobile={mobile}/>
             </header>
         </div>

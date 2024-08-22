@@ -40,7 +40,7 @@ function EmailForm(props) {
         <form className="email-form" onSubmit={onSubmit}>
             <p className='email-form-title'>GET IN TOUCH</p>
             <input
-                className="small-input"
+                className="email-form-small-input"
                 type='text'
                 name='first_name'
                 placeholder='First name'
@@ -48,7 +48,7 @@ function EmailForm(props) {
                 onChange={handleChange}
             />
             <input
-                className="small-input"
+                className="email-form-small-input"
                 type='text'
                 name='last_name'
                 placeholder='Last name'
@@ -56,14 +56,14 @@ function EmailForm(props) {
                 onChange={handleChange}
             />
             <textarea
-                className="large-input"
+                className="email-form-large-input"
                 name='message'
                 placeholder='Message'
                 value={toSend.message}
                 onChange={handleChange}
             />
             <input
-                className="small-input"
+                className="email-form-small-input"
                 type='text'
                 name='reply_to'
                 placeholder='Your email'
