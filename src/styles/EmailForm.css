@@ -1,23 +1,32 @@
 .email-form {
     display: flex;
     flex-direction: column;
+    width: inherit;
+    text-align: center;
 }
 
 .small-input {
     font-family: Roboto;
-    margin-top: 5px;
+    margin-bottom: 10px;
+    background-color: #4B4B4B;
+    color: white;
+    font-size: small;
+    border: none;
 }
 
 .large-input {
     font-family: Roboto;
     resize: none;
-    margin-top: 5px;
+    margin-bottom: 10px;
     height: 100px;
+    background-color: #4B4B4B;
+    color: white;
+    font-size: small;
+    border: none;
 }
 
 button {
     font-family: Roboto;
-    margin-top: 10px;
     background-color: #4361EE;
     height: 30px;
     color: white;
@@ -30,9 +39,10 @@ button:hover {
 }
 
 .email-form-title {
-    margin: 0;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    font-size: 20px;
     font-family: Roboto;
     font-weight: 300;
-    font-size: 50px;
     align-self: center;
 }

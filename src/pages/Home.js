@@ -64,8 +64,8 @@ function Home() {
                         <p className={'hi-there'+device}>HI THERE I'M</p>
                         <p className={'name'+device}>JOSEPH SEARLE</p>
                         <p className={'job-title'+device}>SOFTWARE DEVELOPER</p>
-                        <p className={'info'+device}>I’M A FIRST CLASS COMPUTER SCIENCE GRADUATE WITH SKILLS IN</p>
-                        <p className={'info'+device}>SOFTWARE DEVELOPMENT AND CLOUD COMPUTING</p>
+                        <p className={'info'+device}>I'M A FULL STACK DEVELOPER CURRENTLY WORKING @IBM</p>
+                        <p className={'info'+device}>BUILDING A LARGE SCALE MICROSERVICE'S APPLICATION IN AWS CLOUD</p>
                         <div className={'contacts'+device}>
                             <IconButton data-testid="git-button" size='large' style={{color: '#fff', marginRight: '10px'}} href='https://github.com/JosephSearle' target='_blank'>
                                 <GitHub fontSize='inherit'/>
@@ -80,9 +80,17 @@ function Home() {
                         <Modal
                             isOpen={modalIsOpen}
                             onRequestClose={closeModal}
-                            className='modal'
+                            className={'modal'+ device}
+                            style={{
+                                overlay: {
+                                    backgroundColor: 'rgb(27,27,27,50%)',
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    alignItems: 'center'
+                                }
+                            }}
                         >
-                            <EmailForm />
+                            <EmailForm onClose={closeModal}/>
                         </Modal>
                     </div>
                     {

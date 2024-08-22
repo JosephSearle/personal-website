@@ -2,7 +2,7 @@ import '../styles/EmailForm.css';
 import {useState} from "react";
 import {send} from "emailjs-com";
 
-function EmailForm() {
+function EmailForm(props) {
     const serviceID = process.env.REACT_APP_EMAIL_SERVICE_ID;
     const templateID = process.env.REACT_APP_EMAIL_TEMPLATE_ID;
     const userID = process.env.REACT_APP_EMAIL_USER_ID;
@@ -23,6 +23,9 @@ function EmailForm() {
                 toSend,
                 userID
             )
+            props.onClose();
+        } else {
+
         }
     }
 
@@ -41,7 +44,7 @@ function EmailForm() {
 
     return (
         <form className="email-form" onSubmit={onSubmit}>
-            <p className='email-form-title'>Email Me</p>
+            <p className='email-form-title'>GET IN TOUCH</p>
             <input
                 className="small-input"
                 type='text'

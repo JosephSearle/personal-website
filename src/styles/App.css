@@ -36,14 +36,24 @@
 }
 
 .modal {
-  top: 50%;
-  left: 50%;
-  right: auto;
-  bottom: auto;
-  transform: translate(100%, 75%);
   width: 500px;
-  padding: 10px;
-  background-color: white;
+  padding: 20px;
+  background-color: #2B2B2B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 3px;
+}
+
+.modal-mobile {
+  width: 300px;
+  padding: 20px;
+  background-color: #2B2B2B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
   border-radius: 3px;
 }
 
