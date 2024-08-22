@@ -1,6 +1,7 @@
 import '../styles/EmailForm.css';
 import {useState} from "react";
 import {send} from "emailjs-com";
+import {validateFields} from "../util/emailUtil";
 
 function EmailForm(props) {
     const serviceID = process.env.REACT_APP_EMAIL_SERVICE_ID;
@@ -17,7 +18,7 @@ function EmailForm(props) {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        if(validateToSend(toSend)) {
+        if(validateFields(toSend)) {
             send(
                 serviceID,
                 templateID,
@@ -30,15 +31,6 @@ function EmailForm(props) {
         }
     }
 
-    const validateToSend = (fieldsToSend) => {
-        if (fieldsToSend.message === '' || fieldsToSend.first_name === '' || fieldsToSend.last_name === '' || fieldsToSend.reply_to === '') {
-            console.log('Oops!! You have to fill in all fields to submit.');
-            return false;
-        } else {
-            return true;
-        }
-    }
-
     const handleChange = (e) => {
         setToSend({...toSend, [e.target.name]: e.target.value });
         setErrorMessage("");
@@ -48,7 +40,7 @@ function EmailForm(props) {
         <form className="email-form" onSubmit={onSubmit}>
             <p className='email-form-title'>GET IN TOUCH</p>
             <input
-                className="small-input"
+                className="email-form-small-input"
                 type='text'
                 name='first_name'
                 placeholder='First name'
@@ -56,7 +48,7 @@ function EmailForm(props) {
                 onChange={handleChange}
             />
             <input
-                className="small-input"
+                className="email-form-small-input"
                 type='text'
                 name='last_name'
                 placeholder='Last name'
@@ -64,14 +56,14 @@ function EmailForm(props) {
                 onChange={handleChange}
             />
             <textarea
-                className="large-input"
+                className="email-form-large-input"
                 name='message'
                 placeholder='Message'
                 value={toSend.message}
                 onChange={handleChange}
             />
             <input
-                className="small-input"
+                className="email-form-small-input"
                 type='text'
                 name='reply_to'
                 placeholder='Your email'
