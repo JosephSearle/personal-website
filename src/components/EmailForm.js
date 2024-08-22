@@ -7,6 +7,7 @@ function EmailForm(props) {
     const templateID = process.env.REACT_APP_EMAIL_TEMPLATE_ID;
     const userID = process.env.REACT_APP_EMAIL_USER_ID;
 
+    const [errorMessage, setErrorMessage] = useState("");
     const [toSend, setToSend] = useState({
         first_name: '',
         last_name: '',
@@ -25,7 +26,7 @@ function EmailForm(props) {
             )
             props.onClose();
         } else {
-
+            setErrorMessage("Uh Oh: All fields must be filled in");
         }
     }
 
@@ -40,6 +41,7 @@ function EmailForm(props) {
 
     const handleChange = (e) => {
         setToSend({...toSend, [e.target.name]: e.target.value });
+        setErrorMessage("");
     };
 
     return (
@@ -76,6 +78,7 @@ function EmailForm(props) {
                 value={toSend.reply_to}
                 onChange={handleChange}
             />
+            <p className='email-form-error-message'>{errorMessage}</p>
             <button type='submit'>Submit</button>
         </form>
     );

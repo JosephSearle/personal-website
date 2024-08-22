@@ -46,3 +46,9 @@ button:hover {
     font-weight: 300;
     align-self: center;
 }
+
+.email-form-error-message {
+    margin: 0;
+    font-family: Roboto;
+    color: red;
+}
