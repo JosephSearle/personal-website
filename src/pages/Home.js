@@ -9,6 +9,8 @@ import mobileBackground from '../images/mobileBackground.png';
 import '../styles/App.css';
 import { Email, GitHub, LinkedIn } from '@mui/icons-material';
 import { useState, useEffect, useMemo} from 'react';
+import EmailForm from '../components/EmailForm';
+import Modal from 'react-modal';
 
 function Home() {
     // Window Width variables
@@ -17,6 +19,16 @@ function Home() {
     const [device, setDevice] = useState();
     const [mobile, setMobile] = useState();
     const breakPoint = 844;
+
+    const [modalIsOpen, setIsOpen] = useState(false);
+
+    function openModal() {
+        setIsOpen(true);
+    }
+
+    function closeModal() {
+        setIsOpen(false);
+    }
 
     const webBackgroundStyle =  useMemo(() => {
         return {backgroundImage: `url(${webBackground})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center',backgroundSize: 'cover'}
@@ -52,8 +64,8 @@ function Home() {
                         <p className={'hi-there'+device}>HI THERE I'M</p>
                         <p className={'name'+device}>JOSEPH SEARLE</p>
                         <p className={'job-title'+device}>SOFTWARE DEVELOPER</p>
-                        <p className={'info'+device}>I’M A FIRST CLASS COMPUTER SCIENCE GRADUATE WITH SKILLS IN</p>
-                        <p className={'info'+device}>SOFTWARE DEVELOPMENT AND CLOUD COMPUTING</p>
+                        <p className={'info'+device}>I'M A FULL STACK DEVELOPER CURRENTLY WORKING @IBM</p>
+                        <p className={'info'+device}>BUILDING A LARGE SCALE MICROSERVICE'S APPLICATION IN AWS CLOUD</p>
                         <div className={'contacts'+device}>
                             <IconButton data-testid="git-button" size='large' style={{color: '#fff', marginRight: '10px'}} href='https://github.com/JosephSearle' target='_blank'>
                                 <GitHub fontSize='inherit'/>
@@ -61,10 +73,25 @@ function Home() {
                             <IconButton data-testid="linkedin-button" size='large' style={{color: '#fff', marginRight: '10px'}} href='https://www.linkedin.com/in/josephwilliamsearle/' target='_blank'>
                                 <LinkedIn fontSize='large'/>
                             </IconButton>
-                            <IconButton data-testid="email-button" size='large' style={{color: '#fff', marginRight: '10px'}}>
+                            <IconButton data-testid="email-button" size='large' style={{color: '#fff', marginRight: '10px'}} onClick={openModal}>
                                 <Email fontSize='large'/>
                             </IconButton>
                         </div>
+                        <Modal
+                            isOpen={modalIsOpen}
+                            onRequestClose={closeModal}
+                            className={'modal'+ device}
+                            style={{
+                                overlay: {
+                                    backgroundColor: 'rgb(27,27,27,50%)',
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    alignItems: 'center'
+                                }
+                            }}
+                        >
+                            <EmailForm onClose={closeModal}/>
+                        </Modal>
                     </div>
                     {
                         !mobile &&

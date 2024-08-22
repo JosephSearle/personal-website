@@ -35,6 +35,28 @@
   margin-right: auto;
 }
 
+.modal {
+  width: 500px;
+  padding: 20px;
+  background-color: #2B2B2B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 3px;
+}
+
+.modal-mobile {
+  width: 300px;
+  padding: 20px;
+  background-color: #2B2B2B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 3px;
+}
+
 .title-mobile {
   color: #fff;
   font-family: 'Roboto';
